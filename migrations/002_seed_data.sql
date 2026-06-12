@@ -1,0 +1,1 @@
+INSERT IGNORE INTO roles (name) VALUES ('admin'), ('dispatcher'), ('driver'); INSERT IGNORE INTO users (name, email, password, role_id) SELECT 'Admin', 'admin@angar.ru', '$2y$12$WXqNmzAPKQglVBMmhABAP.7b8xSFtUUKcJMeQsQVQfi.jJBvFC6WK', id FROM roles WHERE name = 'admin' LIMIT 1;
